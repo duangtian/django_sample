@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style_info.css' %}" >
+ 
+<title>{{ var1 }}</title>
+<!--Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'table' %}">{{webname}}</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{% url 'table' %}">{{table}}</a></li>
+      <li class="active"><a href="{% url 'info' %}">{{info}}</a></li>
+    </ul>
+    <button class="btn btn-danger navbar-btn">Logout</button>
+  </div>
+</nav>
+<!--/.Navbar -->
+</head>
+<body>
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h3>{{ var2 }}</h3>
+    <h4>{{ var3 }}</h4>
+    <fieldset>
+      <input placeholder="First Name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Last Name" type="text" tabindex="2" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Your Address" tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+</div>
+
+</body>
+</html>
